@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "00de6023-88fe-49f0-8353-e44e67701975"
   },
   "defaultProject": "resume",
   "schematics": {
@@ -47,8 +48,13 @@
             "polyfills": "apps/resume/src/polyfills.ts",
             "tsConfig": "apps/resume/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/resume/src/favicon.ico", "apps/resume/src/assets"],
-            "styles": ["apps/resume/src/styles.scss"],
+            "assets": [
+              "apps/resume/src/favicon.ico",
+              "apps/resume/src/assets"
+            ],
+            "styles": [
+              "apps/resume/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -109,7 +115,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/resume"],
+          "outputs": [
+            "coverage/apps/resume"
+          ],
           "options": {
             "jestConfig": "apps/resume/jest.config.js",
             "passWithNoTests": true
@@ -138,7 +146,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/resume-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/resume-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
