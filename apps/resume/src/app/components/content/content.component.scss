@@ -1,0 +1,13 @@
+.content-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+    width: 100%;
+    min-height: 100vh;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.open-menu{
+    transform: translateY(100px) scale(0.98);
+}
