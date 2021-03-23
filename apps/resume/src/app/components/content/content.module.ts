@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentComponent } from './content.component';
-import { HamburgerModule } from '../hamburger/hamburger.module';
+import { AboutMeModule } from '../about-me/about-me.module';
 
 
 @NgModule({
   declarations: [ContentComponent],
   imports: [
     CommonModule,
-    HamburgerModule
+    AboutMeModule
   ],
   exports: [ContentComponent]
 })

@@ -4,8 +4,12 @@
     left: 0;
     background-color: antiquewhite;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 100px;
+    overflow: auto;
 }
 
 .open-menu{

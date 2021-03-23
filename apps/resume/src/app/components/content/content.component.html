@@ -1,4 +1,12 @@
-<div class="content-container" [ngClass]="{'open-menu': hamburger.visible}">
-    <resume-hamburger #hamburger></resume-hamburger>
-content
+<div class="content-container" [ngClass]="{'open-menu': visibleMenu}">
+   
+   <div >
+     <resume-about-me></resume-about-me>
+   </div>
+   <div >
+    skills
+   </div>
+   <div >
+    career
+   </div>
 </div>

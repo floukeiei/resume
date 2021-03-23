@@ -3,7 +3,8 @@
     --box-shadow-color: rgba(255, 101, 47, 0.2);
     width: 80px;
     height: 80px;
-    position: relative;
+    position: absolute;
+    z-index: 3;
   
     display: flex;
     justify-content: center;
