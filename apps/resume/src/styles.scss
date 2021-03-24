@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../src/styles/reset.scss';
-
-.card{
+@import '../src/styles/font.scss';
+body {
+  font-family: 'Lexend';
+}
+.card {
   background: #fff;
   border-radius: 2px;
   display: inline-block;
