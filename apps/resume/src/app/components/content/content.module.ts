@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContentComponent } from './content.component';
 import { AboutMeModule } from '../about-me/about-me.module';
 import { SkillModule } from '../skill/skill.module';
+import { CareerModule } from '../career/career.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { SkillModule } from '../skill/skill.module';
   imports: [
     CommonModule,
     AboutMeModule,
-    SkillModule
+    SkillModule,
+    CareerModule
   ],
   exports: [ContentComponent]
 })
