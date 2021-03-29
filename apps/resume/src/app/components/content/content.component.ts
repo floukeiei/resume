@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'resume-content',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
   @Input() visibleMenu!: boolean;
+  @Output() visibleMenuChange = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {
@@ -16,5 +17,10 @@ export class ContentComponent implements OnInit {
   appHeight() {
     const doc = document.documentElement;
     doc.style.setProperty('--content-height', `${window.innerHeight}px`);
+  }
+
+  closeMenu(){
+    this.visibleMenuChange.emit(false);
+    this.visibleMenu = false;
   }
 }

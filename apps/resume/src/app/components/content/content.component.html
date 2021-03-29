@@ -1,4 +1,4 @@
-<div class="content-container" [ngClass]="{'open-menu': visibleMenu}">
+<div class="content-container" [ngClass]="{'open-menu': visibleMenu}" (click)="closeMenu()">
    
    <section id="about-me" class="card">
      <resume-about-me></resume-about-me>

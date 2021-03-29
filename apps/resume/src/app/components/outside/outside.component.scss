@@ -1,5 +1,6 @@
 .outside-container{
     width: 100%;
-    min-height: 100vh;
+    height:  var(--content-height);
+    max-height:  var(--content-height);
     background-color: black;
 }
