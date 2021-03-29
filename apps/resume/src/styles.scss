@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../src/styles/reset.scss';
 @import '../src/styles/font.scss';
+
+:root {
+  --content-height: 100vh;
+}
+
+
+
 body {
   font-family: 'Lexend';
 }

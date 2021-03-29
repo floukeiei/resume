@@ -9,4 +9,11 @@
 .coding-language , .FrameWorks{
     display: grid;
     grid-template-columns: repeat(auto-fit, 160px);
+    place-content: center;
+}
+
+
+.content-skill{
+    padding: 24px;
+    min-width: 100vh;
 }

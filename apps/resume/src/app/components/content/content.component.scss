@@ -4,7 +4,7 @@
     left: 0;
     background-color: antiquewhite;
     width: 100%;
-    max-height: 100vh;
+    max-height: var(--content-height);
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -12,6 +12,7 @@
     overflow: auto;
     justify-content: center;
 }
+
 
 .open-menu{
     transform: translateY(100px) scale(0.98);
