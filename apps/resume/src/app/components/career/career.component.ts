@@ -12,4 +12,8 @@ export class CareerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  gotoLinkin(){
+    window.open('https://www.linkedin.com/in/piyapong-klongbunjong-26570b203/');
+  }
+
 }

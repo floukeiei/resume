@@ -24,6 +24,32 @@ body {
   line-height: 1;
 }
 
+
+.normal-char{
+  font-size: 3em;
+}
+
+.linkin-icon{
+  &:before {
+    content: url(~assets/images/linkedin.svg);
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+  }
+}
+
+
+.github-icon{
+  &:before {
+    content: url(~assets/images/github-sign.svg);
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   body {
     .profile-div {
