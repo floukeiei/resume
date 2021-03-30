@@ -41,5 +41,6 @@
     grid-column: 1/4;
     grid-row: 4;
     display: grid;
-    grid-template-columns: repeat(auto-fit,250px);;
+    grid-template-columns: repeat(auto-fit,250px);
+    justify-content: center;
 }
