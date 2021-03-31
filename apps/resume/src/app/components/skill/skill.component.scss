@@ -12,8 +12,9 @@
 
 .coding-language , .FrameWorks{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 110px);
+    grid-template-columns: repeat(auto-fit, 220px);
     place-content: center;
+    row-gap: 19px;
 }
 
 
