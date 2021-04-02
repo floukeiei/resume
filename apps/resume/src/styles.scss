@@ -50,6 +50,33 @@ body {
   }
 }
 
+.email-icon{
+  &:before {
+    content: url(~assets/images/open-email.svg);
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+  }
+}
+.foot-print > div{
+  padding-left: 30px;
+  &:before{
+    content: url(~assets/images/footprint.svg);
+    width: 20px;
+    display: inline-block;
+  }
+}
+.job-title{
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 400;
+}
+.job-position{
+  font-style: normal;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     .profile-div {
