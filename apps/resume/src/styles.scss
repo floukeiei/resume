@@ -101,5 +101,19 @@ body {
     .topic {
       grid-column: 1/4 !important;
     }
+
+    .skill-item{
+      img {
+        height: 60px  !important;
+      }
+    }
+
+    .coding-language , .FrameWorks{
+      grid-template-columns: repeat(auto-fit, 120px) !important;
+    }
+
+    .skill-item > .skill-label {
+      width: 110px !important;
+    }
   }
 }
