@@ -12,6 +12,10 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.appHeight();
+
+    window.addEventListener('resize', event => {
+      this.appHeight();
+    });
   }
 
   appHeight() {
@@ -19,7 +23,7 @@ export class ContentComponent implements OnInit {
     doc.style.setProperty('--content-height', `${window.innerHeight}px`);
   }
 
-  closeMenu(){
+  closeMenu() {
     this.visibleMenuChange.emit(false);
     this.visibleMenu = false;
   }
