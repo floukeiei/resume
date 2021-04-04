@@ -11,11 +11,12 @@ export class ContentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.appHeight();
+    // this.appHeight();
 
-    window.addEventListener('resize', event => {
-      this.appHeight();
-    });
+    // window.addEventListener('resize', event => {
+    //   this.appHeight();
+    // });
+    
   }
 
   appHeight() {

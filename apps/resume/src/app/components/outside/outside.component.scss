@@ -1,7 +1,13 @@
 .outside-container{
     width: 100%;
-    height:  var(--content-height);
-    max-height:  var(--content-height);
+    // height:  var(--content-height);
+    // max-height:  var(--content-height);
  
-    background-color: black;
+    background-color: #6b1c22;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 9;
 }

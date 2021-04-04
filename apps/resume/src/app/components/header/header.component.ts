@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     const elem = document.querySelector(`section#${id}`);
     const container = document.querySelector('.content-container');
     if(elem){
-      gsap.to(container, {scrollTo: elem});
+      gsap.to(window, {scrollTo: {y:`section#${id}`, offsetY:100}});
     }
   }
 }
