@@ -16,7 +16,7 @@
 
 .about-me-layout{
     display: grid;
-    grid-template-rows: 19vw  1fr auto  auto;
+    grid-template-rows: auto  1fr auto  auto;
     grid-template-columns: 1fr 1fr 1fr;
     min-height: 100vh;
     padding: 24px;

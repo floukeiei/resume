@@ -20,8 +20,9 @@ body {
 }
 
 .first-char {
-  font-size: clamp(16px, 16.5vw, 7em);
-  line-height: 1;
+  font-size: 2em;
+    line-height: 1;
+    color: #ff0000;
 }
 
 
@@ -59,13 +60,18 @@ body {
     margin-top: -2px;
   }
 }
-.foot-print > div{
-  padding-left: 30px;
-  &:before{
-    content: url(~assets/images/footprint.svg);
-    width: 20px;
-    display: inline-block;
+.foot-print {
+  padding-top: 16px;
+  > div{
+    padding-left: 30px;
+    line-height: 36px;
+    &:before{
+      content: url(~assets/images/footprint.svg);
+      width: 20px;
+      display: inline-block;
+    }
   }
+
 }
 .job-title{
   font-size: 1.5em;
@@ -74,6 +80,11 @@ body {
 }
 .job-position{
   font-style: normal;
+  font-weight: 600;
+}
+
+.subtopic{
+  font-size: 2em;
   font-weight: 600;
 }
 

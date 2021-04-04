@@ -1,20 +1,16 @@
 .language-skill,.framework{
     display: flex;
-    padding: 10px;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
 }
 
-.framework{
-
-}
 
 .coding-language , .FrameWorks{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 220px);
+    grid-template-columns: repeat(auto-fit, 200px);
     place-content: center;
-    row-gap: 19px;
+    row-gap:8px;
 }
 
 
@@ -22,3 +18,9 @@
     padding: 24px;
     min-height: 100vh;
 }
+.skill-topic{
+    font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
