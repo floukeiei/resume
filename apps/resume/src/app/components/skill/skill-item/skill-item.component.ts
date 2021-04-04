@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SkillItemComponent implements OnInit {
 
-  @Input() src!:string;
+  @Input() path!:string;
   @Input() label!:string;
 
   constructor() { }
