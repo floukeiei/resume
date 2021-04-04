@@ -95,17 +95,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 @media only screen and (max-width: 768px) {
@@ -125,6 +125,7 @@ body {
     .skill-item{
       img {
         height: 60px  !important;
+        width: 60px;
       }
     }
 
@@ -138,7 +139,7 @@ body {
 
     .about-me-caption{
       padding-left: 0px !important;
-      padding-right: 0px !important; 
+      padding-right: 0px !important;
     }
   }
 }
