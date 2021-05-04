@@ -1,14 +1,15 @@
 <div class="content-container" [ngClass]="{'open-menu': visibleMenu}" (click)="closeMenu()">
-   
+
    <section id="about-me" class="card">
      <resume-about-me></resume-about-me>
-   </section>
-   <section id="skills" class="card">
-    <resume-skill></resume-skill>
    </section>
    <section  id="career" class="card">
     <div>
       <resume-career></resume-career>
     </div>
    </section>
+   <section id="skills" class="card">
+    <resume-skill></resume-skill>
+   </section>
+
 </div>
