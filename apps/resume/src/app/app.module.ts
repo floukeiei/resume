@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, OutsideModule, ContentModule, HamburgerModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), OutsideModule, ContentModule, HamburgerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

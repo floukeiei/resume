@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/resume",
+            "outputPath": "dist/resume/browser",
             "index": "apps/resume/src/index.html",
             "main": "apps/resume/src/main.ts",
             "polyfills": "apps/resume/src/polyfills.ts",
@@ -126,6 +126,52 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {}
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/resume/server",
+            "main": "apps/resume/server.ts",
+            "tsConfig": "apps/resume/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/resume/src/environments/environment.ts",
+                  "with": "apps/resume/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "resume:build",
+            "serverTarget": "resume:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "resume:build:production",
+              "serverTarget": "resume:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "resume:build:production",
+            "serverTarget": "resume:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          }
         }
       }
     },
