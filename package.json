@@ -29,8 +29,9 @@
     "help": "nx help",
     "dev:ssr": "ng run resume:serve-ssr",
     "serve:ssr": "node dist/resume/server/main.js",
-    "build:ssr": "ng build --prod --base-href=/production/ && ng run resume:server:production",
-    "prerender": "ng run resume:prerender"
+    "build:ssr": "ng build --prod --base-href=/production/ && ng run resume:serverless:production",
+    "prerender": "ng run resume:prerender",
+    "aws:deploy": "serverless deploy"
   },
   "private": true,
   "dependencies": {

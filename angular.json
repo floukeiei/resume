@@ -147,6 +147,26 @@
             }
           }
         },
+        "serverless": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/resume/server",
+            "main": "apps/resume/serverless.ts",
+            "tsConfig": "apps/resume/tsconfig.serverless.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/resume/src/environments/environment.ts",
+                  "with": "apps/resume/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
