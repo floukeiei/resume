@@ -161,9 +161,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/Angular/production/1620501578498-2021-05-08T19:19:38.498Z/Angular.zip"
+          "S3Key": "serverless/Angular/production/1620527947258-2021-05-09T02:39:07.258Z/Angular.zip"
         },
-        "Handler": "lambda.ssrserverless",
+        "Handler": "lambda.handler",
         "Runtime": "nodejs14.x",
         "FunctionName": "Angular-production-api",
         "MemorySize": 128,
@@ -179,14 +179,14 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionEI9mW8xOsB4x1DpiVTeF0B6vAJXDMAdmqwA1cQV9ec": {
+    "ApiLambdaVersioncqmnpLsClHjtWluKwOlKIE4xGTZPCHLbPsLeggHO24": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "Z2B5oZuEg4X99BzUFNdPykL0YqtqAWUtsRzFyTcFdkA="
+        "CodeSha256": "QnbXN49M5kvyTlMPPETWojcwGm3GXXseK1yXig6vzHk="
       }
     },
     "ApiGatewayRestApi": {
@@ -216,10 +216,10 @@
         }
       }
     },
-    "ApiGatewayMethodProxyVarAny": {
+    "ApiGatewayMethodProxyVarGet": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
-        "HttpMethod": "ANY",
+        "HttpMethod": "GET",
         "RequestParameters": {},
         "ResourceId": {
           "Ref": "ApiGatewayResourceProxyVar"
@@ -259,10 +259,10 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayMethodAny": {
+    "ApiGatewayMethodGet": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
-        "HttpMethod": "ANY",
+        "HttpMethod": "GET",
         "RequestParameters": {},
         "ResourceId": {
           "Fn::GetAtt": [
@@ -305,7 +305,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1620501567570": {
+    "ApiGatewayDeployment1620527936307": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -314,8 +314,8 @@
         "StageName": "production"
       },
       "DependsOn": [
-        "ApiGatewayMethodProxyVarAny",
-        "ApiGatewayMethodAny"
+        "ApiGatewayMethodProxyVarGet",
+        "ApiGatewayMethodGet"
       ]
     },
     "ApiLambdaPermissionApiGateway": {
@@ -368,7 +368,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionEI9mW8xOsB4x1DpiVTeF0B6vAJXDMAdmqwA1cQV9ec"
+        "Ref": "ApiLambdaVersioncqmnpLsClHjtWluKwOlKIE4xGTZPCHLbPsLeggHO24"
       },
       "Export": {
         "Name": "sls-Angular-production-ApiLambdaFunctionQualifiedArn"

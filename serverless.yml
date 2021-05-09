@@ -2,6 +2,7 @@ service: Angular
 
 plugins:
   - serverless-apigw-binary
+  - serverless-offline
 
 provider:
   name: aws
@@ -13,26 +14,23 @@ provider:
 
 package:
   exclude:
-    - src/**
-    - node_modules/**
-    - e2e/**
-    - coverage/**
-    ##- '!src/assets/**'
-    - '!node_modules/aws-serverless-express/**'
-    - '!node_modules/binary-case/**'
-    - '!node_modules/type-is/**'
-    - '!node_modules/media-typer/**'
-    - '!node_modules/mime-types/**'
-    - '!node_modules/mime-db/**'
-
+    - ./**
+  include:
+    - "node_modules/aws-serverless-express/**"
+    - "node_modules/binary-case/**"
+    - "node_modules/type-is/**"
+    - "node_modules/media-typer/**"
+    - "node_modules/mime-types/**"
+    - "node_modules/mime-db/**"
+    - "dist/resume/**"
+    - "lambda.js"
 custom:
   apigwBinary:
     types:
-      - '*/*'
-
+      - "*/*"
 functions:
   api:
-    handler: lambda.ssrserverless
+    handler: lambda.handler
     events:
-      - http: ANY {proxy+}
-      - http: ANY /
+      - http: GET {proxy+}
+      - http: GET /
