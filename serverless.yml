@@ -7,10 +7,10 @@ plugins:
 provider:
   name: aws
   runtime: nodejs14.x
-  memorySize: 128
+  memorySize: 256
   timeout: 30
   stage: production
-  region: us-east-2
+  region: ap-southeast-1
 
 package:
   exclude:

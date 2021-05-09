@@ -1,3 +1,4 @@
+
 const awsServerlessExpress = require("aws-serverless-express");
 const server = require("./dist/resume/server/main");
 const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");

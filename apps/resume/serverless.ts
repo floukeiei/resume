@@ -5,7 +5,10 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import * as compression from 'compression';
 export const app = express();
+
+app.use(compression())
 const distFolder = join(process.cwd(), 'dist/resume/browser');
 const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
